@@ -1394,16 +1394,13 @@ header .logo a {
 	height: 100%;
 	min-height: 720px;
 	display: table;
-	position: relative;
 	text-align: right;
 }
 
 #intro .row {
 	width: 100%;
-	left: 117px;
 	position: relative;
-	max-width: 1140px;
-	margin: 0 auto;
+	margin: -70px;
 }
 
 .intro-overlay {
