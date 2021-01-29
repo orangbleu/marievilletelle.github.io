@@ -1400,7 +1400,6 @@ header .logo a {
 #intro .row {
 	width: 100%;
 	position: relative;
-	margin: -70px;
 }
 
 .intro-overlay {
@@ -1426,7 +1425,7 @@ header .logo a {
 	line-height: 1.071;
 	margin-top: 0;
 	margin-bottom: .6rem;
-	text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+	margin-right: 7rem;
 }
 .intro-content h5 {
 	color:  #ba4e16;
@@ -1437,6 +1436,7 @@ header .logo a {
 	text-transform: uppercase;
 	letter-spacing: .3rem;
 	text-shadow: 0 0 6px rgba(0, 0, 0, 0.2);
+	margin-right: 7rem;
 }
 .intro-content .intro-position {
 	font-family: "lora-regular", serif;
