@@ -1384,6 +1384,7 @@ header .logo a {
  *
  * ------------------------------------------------------------------- 
  */
+
 #intro {
 	background: #000000 no-repeat center bottom;
 	-webkit-background-size: cover;
@@ -1392,7 +1393,6 @@ header .logo a {
 	background-attachment: fixed;
 	width: 100%;
 	height: 100%;
-	min-height: 720px;
 	display: table;
 	text-align: right;
 }
@@ -1410,6 +1410,22 @@ header .logo a {
 	height: 100%;
 	background: #111111;
 }
+
+.videoContainer
+{
+    position:absolute;
+    height:100%;
+    width:100%;
+    overflow: hidden;
+}
+
+.videoContainer video
+{
+    min-width: 100%;
+    min-height: 100%;
+}
+
+
 .intro-content {
 	background: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0), rgba(0,0,0,0.5), rgba(0,0,0,1));
 	position: relative;
@@ -1530,9 +1546,11 @@ header .logo a {
 	}
 	.intro-content h1 {
 		font-size: 5.2rem;
+		margin: 0 10px;
 	}
 	.intro-content h5 {
 		font-size: 1.8rem;
+		margin: 0 10px;
 	}
 	.intro-content .intro-position {
 		font-size: 1.3rem;
@@ -1554,34 +1572,13 @@ header .logo a {
 	}
 	.intro-content h5 {
 		font-size: 1.5rem;
-		margin-bottom: .3rem;
-		letter-spacing: .2rem;
-	}
-	.intro-content .intro-position {
-		font-size: 1.2rem;
-	}
-	.intro-content .intro-position span {
-		padding: 0 .6rem;
-	}
-	.intro-content .intro-position span::before, .intro-content .intro-position span::after {
-		display: none !important;
-	}
-	.intro-social {
-		font-size: 2.4rem;
-	}
-}
-
-
-/** 
- * ===================================================================
- * 11. about - (_layout.scss)
- *
+	*
  * ------------------------------------------------------------------- 
  */
 #about {
 	background: #FFFFFF;
 	padding-top: 12rem;
-	padding-bottom: 15rem;
+	padding-bottom: 5rem;
 }
 #about .section-intro {
 	margin-bottom: 3rem;
@@ -1615,7 +1612,41 @@ header .logo a {
 	font-size: 1.8rem;
 	text-transform: uppercase;
 	letter-spacing: .25rem;
+}	margin-bottom: .3rem;
+		letter-spacing: .2rem;
+	}
+	.intro-content .intro-position {
+		font-size: 1.2rem;
+	}
+	.intro-content .intro-position span {
+		padding: 0 .6rem;
+	}
+	.intro-content .intro-position span::before, .intro-content .intro-position span::after {
+		display: none !important;
+	}
+	.intro-social {
+		font-size: 2.4rem;
+		margin: -10% -25px;
+	}
 }
+
+
+/** 
+ * ===================================================================
+ * 11. about - (_layout.scss)
+ *
+ * ------------------------------------------------------------------- 
+ */
+#about {
+	background: #FFFFFF;
+	padding-top: 12rem;
+	padding-bottom: 5rem;
+}
+#about .section-intro {
+	margin-bottom: 3rem;
+}
+
+
 .about-content .info-list {
 	list-style: none;
 	margin-left: 0;
@@ -1743,56 +1774,6 @@ header .logo a {
     color: #862121;
 }
 
-
-/**
- * responsive:
- * about
- * ------------------------------------------------------------------- 
- */
-@media only screen and (max-width:1024px) {
-	.intro-info {
-		margin-right: 0;
-		margin-left: 0;
-	}
-}
-@media only screen and (max-width:768px) {
-	.intro-info img {
-		height: 12rem;
-		width: 12rem;
-	}
-	.intro-info .lead {
-		padding-left: 11rem;
-	}
-	.about-content h3 {
-		text-align: center;
-	}
-	.about-content .info-list, .about-content .skill-bars {
-		margin-bottom: 4.2rem;
-	}
-	.button-section .button {
-		width: 100%;
-		margin-bottom: 3rem;
-	}
-	.button-section [class*="col-"] .button:first-child {
-		margin-right: 0;
-	}
-}
-@media only screen and (max-width:600px) {
-	.intro-info {
-		text-align: center;
-		margin-top: 3rem;
-	}
-	.intro-info img {
-		height: 12rem;
-		width: 12rem;
-		float: none;
-		display: inline-block;
-	}
-	.intro-info .lead {
-		padding-left: 0;
-		text-align: center;
-	}
-}
 
 /** 
  * ===================================================================
@@ -2194,19 +2175,7 @@ header .logo a {
 	color: #3F0D39;
 }
 
-/**
- * responsive:
- * cta
- * -------------------------------------------------------------------
- */
-@media only screen and (max-width:650px) {
-	.cta-content {
-		max-width: 650px;
-	}
-	.cta-content h2 {
-		font-size: 2.4rem;
-	}
-}
+
 
 
 /** 
@@ -2215,87 +2184,160 @@ header .logo a {
  *
  * ------------------------------------------------------------------- 
  */
-#services {
-	background: #313131 url(../images/bg.jpg) no-repeat center;
+#selectedworks {
+	background: #FFFFFF no-repeat center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	background-size: cover;
-	padding-top: 12rem;
-	padding-bottom: 12rem;
-	color: white;
+	padding-top: 2%;
+	padding-bottom: 10%;
 	position: relative;
-}
-#services .overlay {
-	position: absolute;
-	top: 0;
-	left: 0;
-	width: 100%;
-	height: 100%;
-	background: #151515;
-	opacity: .9;
-}
-
-#services .section-intro {
-	margin-bottom: 1.8rem;
-}
-
-#services .section-intro h1 {
-	color: white;
-}
-#services .section-intro h5 {
-	color:  #ba4e16;
-}
-#services .section-intro p {
-	color: rgba(255, 255, 255, 0.7);
-}
-.services-content {
-	max-width: 1200px;
-}
-.services-list {
-	margin-top: 1.2rem;
 	text-align: center;
 }
-.services-list .service {
-	margin-bottom: 1.2rem;
-	padding: 0 30px;
+
+.section-intro {
+	max-width: 700px;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	margin-bottom: 3.6rem;
+	position: relative;
 }
-.services-list .icon {
-	display: inline-block;
-	margin-bottom: 2.1rem;
+.intro-info {
+	margin-top: 2rem;
+	margin-right: -30px;
+	margin-left: -95px;
 }
-.services-list .icon i {
-	font-size: 5.4rem;
+.intro-info img {
+	height: 15rem;
+	width: 15rem;
+	border-radius: 70%;
+	margin: 1.3rem 0 0 0;
+	float: left;
+}
+.intro-info .lead {
+	text-align: left;
+	padding-left: 20rem;
+}
+.selectedworks-content {
+	display: block;
+	position: relative;
+	text-align: center;
+	max-height: 50%;
+	width: 70%;
+	margin: auto auto;
+}
+.selectedworks-content h3 {
+	font-family: "poppins-bold", sans-serif;
+	font-size: 1.8rem;
+	text-transform: uppercase;
+	letter-spacing: .25rem;
+}
+#selectedworks .section-intro h1 {
+	color: black;
+}
+#selectedworks .section-intro h5 {
 	color:  #ba4e16;
 }
-.services-list h3 {
-	color: #FFFFFF;
-}
-.services-list .desc {
-	color: rgba(255, 255, 255, 0.6);
+#selectedworks .section-intro p {
+	color: rgba(0, 0, 0, 0.7);
 }
 
 /* pagination */
 .owl-pagination {
 	text-align: center;
-	width: 100%;
 	margin: .6rem 0 0;
 }
+
 .owl-theme .owl-controls .owl-page {
 	display: inline-block;
 }
+
 .owl-theme .owl-controls .owl-page span {
-	display: block;
 	width: 1.2rem;
 	height: 1.2rem;
 	margin: 1.2rem .8rem 0 .8rem;
 	border-radius: 50%;
 	display: inline-block;
-	background: #FFFFFF;
+	background: #ebebeb;
 }
 .owl-theme .owl-controls .owl-page.active span {
 	background:  #ba4e16;
 }
 
+.owl-prev {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 40%;
+    margin-left: -20px;
+    display: block !important;
+    border:0px solid black;
+}
+
+.owl-next {
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    top: 40%;
+    right: -25px;
+    display: block !important;
+    border:0px solid black;
+}
+.owl-prev i, .owl-next i {transform : scale(1,2);}
+
+/**
+ * responsive:
+ * about
+ * ------------------------------------------------------------------- 
+ */
+@media only screen and (max-width:1024px) {
+	.intro-info {
+		margin-right: 0;
+		margin-left: 0;
+	}
+}
+@media only screen and (max-width:768px) {
+	.intro-info img {
+		height: 12rem;
+		width: 12rem;
+	}
+	.intro-info .lead {
+		padding-left: 11rem;
+	}
+	.selectedworks-content h3 {
+		text-align: center;
+	}
+	.selectedworks-content .info-list, .selectedworks-content .skill-bars {
+		margin-bottom: 4.2rem;
+	}
+	.button-section .button {
+		width: 100%;
+		margin-bottom: 3rem;
+	}
+	.button-section [class*="col-"] .button:first-child {
+		margin-right: 0;
+	}
+}
+@media only screen and (max-width:600px) {
+	.intro-info {
+		text-align: center;
+		margin-top: 3rem;
+	}
+	.intro-info img {
+		height: 12rem;
+		width: 12rem;
+		float: none;
+		display: inline-block;
+	}
+	.intro-info .lead {
+		padding-left: 0;
+		text-align: center;
+	}
+	.selectedworks-content {
+		width: 100%;
+	}
+}
 
 /** 
  * ===================================================================

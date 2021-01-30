@@ -5,6 +5,8 @@
  * ------------------------------------------------------------------- 
  */ 
 
+
+
 (function($) {
 
 	"use strict";
@@ -35,6 +37,30 @@
   	}, 100);
 
 
+	/*
+	Choose video based on screen width (portrait vs landscape)
+	*/
+	var w = window.matchMedia("(max-width: 700px)");
+  	var vid = document.getElementById("introvid");
+  	var source = document.createElement("source");
+  	source.id = "hvid";
+  	source.setAttribute("type", "video/mp4");
+  	vid.appendChild(source);
+  	
+  	if (w.matches) {
+  		vid.pause();
+    	source.removeAttribute("src");
+    	source.setAttribute("src", "intro_portrait.mp4");
+    	vid.load();
+    	vid.play();
+  } else {
+    vid.pause();
+    source.removeAttribute("src");
+    source.setAttribute("src", "intro_landscape.mp4");
+    vid.load();
+    vid.play();
+  }
+	
 	/*---------------------------------------------------- */
 	/* FitVids
 	------------------------------------------------------ */ 
@@ -44,16 +70,17 @@
 	/*---------------------------------------------------- */
 	/* Owl Carousel
 	------------------------------------------------------ */ 
-	$("#owl-slider").owlCarousel({
-        navigation: false,
-        pagination: true,
-        itemsCustom : [
-	        [0, 1],
-	        [700, 2],
-	        [960, 3]
-	     ],
-        navigationText: false
-    });
+	$('.owl-carousel').owlCarousel(
+	{
+		video: true,
+    	items:1,
+    	autoPlay: true,
+    	navigation:true,
+    	mouseDrag: false,
+		navigationText : ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>']
+  	}
+	);
+
 
 
 	/*----------------------------------------------------- */

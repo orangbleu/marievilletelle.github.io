@@ -39,9 +39,10 @@
         <nav class="header-nav-wrap">
             <ul class="header-nav">
                 <li><a class="smoothscroll"  href="#home" title="home">Home</a></li>
-                <li><a class="smoothscroll"  href="#about" title="about">Über Mich</a></li>
+                <li><a class="smoothscroll"  href="#selectedworks" title="selectedworks">Aktuelle Projekte</a></li>
                 <li><a class="smoothscroll"  href="#resume" title="resume">Lebenslauf</a></li>
-                <li><a class="smoothscroll"  href="#publications" title="publications">Filmografie</a></li>
+                <li><a class="smoothscroll"  href="#publications" title="filmographie">Filmografie</a></li>
+                <li><a href="#publications" title="frenchversion">Français</a></li>
             </ul>
         </nav>
 
@@ -51,9 +52,10 @@
    <section id="intro">   
 
    	<div class="intro-overlay">
-   	   	<video autoplay muted loop id="intro">
-  			<source src="cut.mp4" type="video/mp4">
-		</video>
+   		<div class="videoContainer">
+   	   	<video id="introvid" autoplay muted loop>
+  				</video>
+  			</div>
    	</div>
    	<div class="intro-content">
    		<div class="row">
@@ -74,119 +76,43 @@
 
    <!-- about section
    ================================================== -->
-   <section id="about">  
 
-   	<div class="row section-intro">
+	<section id="selectedworks">
+	   <div class="row section-intro">
    		<div class="col-twelve">
-
    			<h5>About</h5>
    			<h1>Let me introduce myself.</h1>
-
    			<div class="intro-info">
-
    				<img src="images/photo_crop.png" alt="Profile Picture">
-
    				<p class="lead">I am a passionate data scientist and machine learning engineer with experience in deep learning, robotics and computational biology. I care about applying advanced ML models to complex problems to gain knowledge and care about interpretability of predictive systems.</p>
    			</div>   			
-
-   		</div>   		
+   		</div>		
    	</div> <!-- /section-intro -->
-
-   	<div class="row ab"<img src="favicon.png" alt="">
-
-   		<div class="col-six tab-full">
-
-   			<h2>Profile</h2>
-   			<p>After a bachelor in computer science, I joined our university's robot soccer team for several years during my master's degree. I worked on computer vision problems and robot localization, applying ML algorithms. For my master's thesis, I switched to the domain of computational biology where I stayed for a doctorate program. In my PhD, I predicted cancer genes using graph deep learning (see publications).</p>
-
-				<h4>General Info</h4>
-   			<ul class="info-list">
-   				<li>
-   					<strong>Full Name:</strong>
-   					<span>Marie Villetelle</span>
-   				</li>
-   				<li>
-   					<strong>Birth Year:</strong>
-   					<span>1990</span>
-   				</li>
-   				<li>
-   					<strong>Location:</strong>
-   					<span>Berlin (but open to remote work)</span>
-   				</li>
-   				<li>
-   					<strong>Email:</strong>
-   					<span>mvob</span>
-   				</li>
-   			</ul> <!-- /info-list -->
-   			<h4>Languages</h4>
-				<ul class="info-list">
-   				<li>
-   					<strong>Francais:</strong>
-   					<span>Mother Tongue</span>
-   				</li>
-   				<li>
-   					<strong>Deutsch:</strong>
-   					<span>Fluent</span>
-   				</li>
-   				<li>
-   					<strong>English:</strong>
-   					<span>Intermediate</span>
-   				</li>
-   				<li>
-   					<strong>Espagnol:</strong>
-   					<span>Intermediate</span>
-   				</li>
-
-   			</ul> <!-- /info-list -->
-
-   		</div>
-
-   		<div class="col-six tab-full">
-
-   			<h2>Skills</h2>
-   			<p>I have profound experience in data analysis, data cleaning and machine learning. I enjoy adapting algorithms to specific domains, especially computational biology. I work mostly in <b>Python</b> (and rarely R) with <b>Tensorflow</b>, <b>Pandas</b> and <b>Numpy</b> but have realized projects in <b>C++</b>, <b>MATLAB</b> and <b>Java</b> before.</p>
-
-				<ul class="skill-bars">
-					<li>
-				   	<div class="progress percent95"><span>95%</span></div>
-				   	<strong>Machine Learning</strong>
-				   </li>
-				   <li>
-				   	<div class="progress percent90"><span>90%</span></div>
-				   	<strong>Deep Learning</strong>
-				   </li>
-				   <li>
-				   	<div class="progress percent90"><span>90%</span></div>
-				   	<strong>Data Science</strong>
-				   </li>
-				   <li>
-				   	<div class="progress percent80"><span>80%</span></div>
-				   	<strong>Bioinformatics<strong>
-				   </li>
-				   <li>
-				   	<div class="progress percent80"><span>80%</span></div>
-				   	<strong>Computational Cancer Biology</strong>
-				   </li>
-				   <li>
-				   	<div class="progress percent80"><span>80%</span></div>
-				   	<strong>Network Analysis</strong>
-				   </li>
-      
-				</ul> <!-- /skill-bars -->		
-
-   		</div>
-
-   	</div>
-
-   	<div class="row button-section">
-   		<div class="col-twelve">
-   			<a href="CV-roman-schulte-sasse.pdf" title="Download CV" class="button button-primary">Download CV</a>
-   		</div>   		
-   	</div>
-
-   </section> <!-- /process-->    
-
-
+   	
+		<div class="selectedworks-content">
+	   <div class="owl-carousel owl-theme">
+    		<div class="owl-lazy" data-src="images/portfolio/modals/m-clouds.jpg"><img src="images/portfolio/modals/m-clouds.jpg"></div>
+    		<div class="owl-lazy" data-src="images/intro-bg.jpg"><img src="images/intro-bg.jpg"></div>
+		</div>
+		</div>
+	</section>
+	
+	<section id="archivedprojects">
+	</section>
+	
+	<section id="workinprogress">
+		<div class="selectedworks-content">
+	   <div class="owl-carousel owl-theme">
+    		<div class="owl-lazy" data-src="images/portfolio/modals/m-clouds.jpg"><img src="images/portfolio/modals/m-clouds.jpg"></div>
+    		<div class="owl-lazy" data-src="images/intro-bg.jpg"><img src="images/intro-bg.jpg"></div>
+		</div>
+		</div>
+	</section>
+	
+	<section id="cinography" class="grey-section">
+	</section>
+	
+	
    <!-- resume Section
    ================================================== -->
 	<section id="resume" class="grey-section">
@@ -457,7 +383,100 @@
         </div>
 	</section> <!-- /section publications -->
 
+	<section id="skills">
+   	<div class="row ab"<img src="favicon.png" alt="">
 
+   		<div class="col-six tab-full">
+
+   			<h2>Profile</h2>
+   			<p>After a bachelor in computer science, I joined our university's robot soccer team for several years during my master's degree. I worked on computer vision problems and robot localization, applying ML algorithms. For my master's thesis, I switched to the domain of computational biology where I stayed for a doctorate program. In my PhD, I predicted cancer genes using graph deep learning (see publications).</p>
+
+				<h4>General Info</h4>
+   			<ul class="info-list">
+   				<li>
+   					<strong>Full Name:</strong>
+   					<span>Marie Villetelle</span>
+   				</li>
+   				<li>
+   					<strong>Birth Year:</strong>
+   					<span>1990</span>
+   				</li>
+   				<li>
+   					<strong>Location:</strong>
+   					<span>Berlin (but open to remote work)</span>
+   				</li>
+   				<li>
+   					<strong>Email:</strong>
+   					<span>mvob</span>
+   				</li>
+   			</ul> <!-- /info-list -->
+   			<h4>Languages</h4>
+				<ul class="info-list">
+   				<li>
+   					<strong>Francais:</strong>
+   					<span>Mother Tongue</span>
+   				</li>
+   				<li>
+   					<strong>Deutsch:</strong>
+   					<span>Fluent</span>
+   				</li>
+   				<li>
+   					<strong>English:</strong>
+   					<span>Intermediate</span>
+   				</li>
+   				<li>
+   					<strong>Espagnol:</strong>
+   					<span>Intermediate</span>
+   				</li>
+
+   			</ul> <!-- /info-list -->
+
+   		</div>
+
+   		<div class="col-six tab-full">
+
+   			<h2>Skills</h2>
+   			<p>I have profound experience in data analysis, data cleaning and machine learning. I enjoy adapting algorithms to specific domains, especially computational biology. I work mostly in <b>Python</b> (and rarely R) with <b>Tensorflow</b>, <b>Pandas</b> and <b>Numpy</b> but have realized projects in <b>C++</b>, <b>MATLAB</b> and <b>Java</b> before.</p>
+
+				<ul class="skill-bars">
+					<li>
+				   	<div class="progress percent95"><span>95%</span></div>
+				   	<strong>Machine Learning</strong>
+				   </li>
+				   <li>
+				   	<div class="progress percent90"><span>90%</span></div>
+				   	<strong>Deep Learning</strong>
+				   </li>
+				   <li>
+				   	<div class="progress percent90"><span>90%</span></div>
+				   	<strong>Data Science</strong>
+				   </li>
+				   <li>
+				   	<div class="progress percent80"><span>80%</span></div>
+				   	<strong>Bioinformatics<strong>
+				   </li>
+				   <li>
+				   	<div class="progress percent80"><span>80%</span></div>
+				   	<strong>Computational Cancer Biology</strong>
+				   </li>
+				   <li>
+				   	<div class="progress percent80"><span>80%</span></div>
+				   	<strong>Network Analysis</strong>
+				   </li>
+      
+				</ul> <!-- /skill-bars -->		
+
+   		</div>
+
+   	</div>
+
+   	<div class="row button-section">
+   		<div class="col-twelve">
+   			<a href="CV-roman-schulte-sasse.pdf" title="Download CV" class="button button-primary">Download CV</a>
+   		</div>   		
+   	</div>
+
+   </section> <!-- /process-->    
 
    <!-- footer
    ================================================== -->
