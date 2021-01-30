@@ -69,17 +69,28 @@
 
 	/*---------------------------------------------------- */
 	/* Owl Carousel
-	------------------------------------------------------ */ 
+	------------------------------------------------------ */
+	if (w.matches) {
 	$('.owl-carousel').owlCarousel(
-	{
-		video: true,
-    	items:1,
-    	autoPlay: true,
-    	navigation:true,
-    	mouseDrag: false,
-		navigationText : ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>']
-  	}
-	);
+		{
+			video: true,
+    		items:1,
+    		autoPlay: true
+  		}
+		);
+	}
+	else {
+	$('.owl-carousel').owlCarousel(
+		{
+			video: true,
+    		items:1,
+    		autoPlay: true,
+    		mouseDrag: false,
+    		navigation: true,
+			navigationText : ['<i class="fa fa-angle-left" aria-hidden="true"></i>','<i class="fa fa-angle-right" aria-hidden="true"></i>']
+  		}
+		);
+	}
 
 
 
