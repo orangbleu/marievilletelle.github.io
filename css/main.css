@@ -848,46 +848,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 	content: counter(definitions, decimal) ". ";
 }
 
-/** 
- * Pull Quotes
- * -----------
- * markup:
- *
- * <aside class="pull-quote">
- *		<blockquote>
- *			<p></p>
- *		</blockquote>
- *	</aside>
- *
- * --------------------------------------------------------------------- 
- */
-.pull-quote {
-	position: relative;
-	padding: 2.1rem 3rem 2.1rem 0px;
-}
-.pull-quote:before, .pull-quote:after {
-	height: 1em;
-	position: absolute;
-	font-size: 8rem;
-	font-family: Arial, Sans-Serif;
-	color: #333;
-}
-.pull-quote:before {
-	content: "\201C";
-	top: 33px;
-	left: 0;
-}
-.pull-quote:after {
-	content: '\201D';
-	bottom: -33px;
-	right: 0;
-}
-.pull-quote blockquote {
-	margin: 0;
-}
-.pull-quote blockquote:before {
-	content: none;
-}
+
 
 /** 
  * Stats Tab
@@ -1507,10 +1468,10 @@ header .logo a {
 	position: absolute;
 	width: 100%;
 	left: 0;
-	bottom: 10rem;
-	font-size: 3.3rem;
-	margin: -60px;
-	padding: 0;
+	bottom: 0.6rem;
+	font-size: 4.5rem;
+	padding: 70px;
+	margin-bottom: auto;
 }
 .intro-social li {
 	display: inline-block;
@@ -1534,7 +1495,7 @@ header .logo a {
 		font-size: 7.6rem;
 	}
 	.intro-social {
-		font-size: 3rem;
+		font-size: 4.5rem;
 	}
 	.intro-social li {
 		margin: 0 15px;
@@ -1556,7 +1517,8 @@ header .logo a {
 		font-size: 1.3rem;
 	}
 	.intro-social {
-		font-size: 2.5rem;
+		font-size: 2.3rem;
+		padding: 45px;
 	}
 	.intro-social li {
 		margin: 0 10px;
@@ -1572,11 +1534,11 @@ header .logo a {
 	}
 	.intro-content h5 {
 		font-size: 1.5rem;
-	*
- * ------------------------------------------------------------------- 
- */
+	}
+}
+
 #about {
-	background: #FFFFFF;
+	background: #ffffff;
 	padding-top: 12rem;
 	padding-bottom: 5rem;
 }
@@ -1612,22 +1574,17 @@ header .logo a {
 	font-size: 1.8rem;
 	text-transform: uppercase;
 	letter-spacing: .25rem;
-}	margin-bottom: .3rem;
-		letter-spacing: .2rem;
-	}
-	.intro-content .intro-position {
-		font-size: 1.2rem;
-	}
-	.intro-content .intro-position span {
-		padding: 0 .6rem;
-	}
-	.intro-content .intro-position span::before, .intro-content .intro-position span::after {
-		display: none !important;
-	}
-	.intro-social {
-		font-size: 2.4rem;
-		margin: -10% -25px;
-	}
+	margin-bottom: .3rem;
+	letter-spacing: .2rem;
+}
+.intro-content .intro-position {
+	font-size: 1.2rem;
+}
+.intro-content .intro-position span {
+	padding: 0 .6rem;
+}
+.intro-content .intro-position span::before, .intro-content .intro-position span::after {
+	display: none !important;
 }
 
 
@@ -1943,6 +1900,278 @@ header .logo a {
 	}
 }
 
+/* ------------------------------------------------------------------- 
+ * ## bricks/masonry - (_site-layout.scss)
+ * ------------------------------------------------------------------- */
+#archivedprojects {
+	padding-top: 15rem;
+	padding-bottom: 15rem;
+	position: relative;
+}
+.section-intro-black {
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+	margin-bottom: 3.6rem;
+	position: relative;
+}
+.section-intro-black h1 {
+	font-family: "poppins-semibold", serif;
+	font-size: 3.6rem;
+	color: #ffffff;
+	line-height: 1.25;
+	margin-bottom: 1.2rem;
+}
+.section-intro-black h5 {
+	color:  #ba4e16;
+	font-size: 1.6rem;
+	line-height: 1.875;
+	margin-bottom: 0.3rem;
+	letter-spacing: .4rem;
+}
+
+.masonry-wrap {
+    margin-top: 4.8rem;
+    max-width: none;
+    width: 1600px;
+}
+
+.masonry:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.masonry .grid-sizer, .masonry__brick {
+    width: 400px;
+}
+
+.masonry__brick {
+    float: left;
+    padding: 0;
+}
+
+.item-folio {
+    position: relative;
+    overflow: hidden;
+}
+
+.item-folio__thumb img {
+    vertical-align: top;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+}
+
+.item-folio__thumb .shadow-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: .8;
+    background: -moz-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
+    background: -webkit-linear-gradient(top, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
+    background: linear-gradient(to bottom, transparent 0%, rgba(0, 0, 0, 0.8) 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#00000000', endColorstr='#cc000000', GradientType=0);
+}
+
+.item-folio__thumb a {
+    display: block;
+}
+
+.item-folio__thumb a::before {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.8);
+    content: "";
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    z-index: 1;
+}
+
+.item-folio__thumb a::after {
+    content: "...";
+    font-family: georgia, serif;
+    font-size: 3rem;
+    display: block;
+    height: 30px;
+    width: 30px;
+    line-height: 30px;
+    margin-left: -15px;
+    margin-top: -15px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    text-align: center;
+    color: #FFFFFF;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: all 0.5s ease-in-out;
+    transition: all 0.5s ease-in-out;
+    -webkit-transform: scale(0.5);
+    -ms-transform: scale(0.5);
+    transform: scale(0.5);
+    z-index: 1;
+}
+
+.item-folio__text {
+    position: absolute;
+    left: 0;
+    bottom: 3rem;
+    padding: 0 3rem;
+    z-index: 2;
+}
+
+.item-folio__title {
+    color: #FFFFFF;
+    font-family: "montserrat-semibold", sans-serif;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    margin: 0;
+}
+
+.item-folio__cat {
+    color: rgba(255, 255, 255, 0.5);
+    font-family: "montserrat-regular", sans-serif;
+    font-size: 1.5rem;
+    margin-bottom: 0;
+}
+
+.item-folio__caption {
+    display: none;
+}
+
+.item-folio__project-link {
+    display: block;
+    color: #FFFFFF;
+    box-shadow: 0 0 0 1px #FFFFFF;
+    border-radius: 50%;
+    height: 4.2rem;
+    width: 4.2rem;
+    text-align: center;
+    z-index: 500;
+    position: absolute;
+    top: 3rem;
+    left: 3rem;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    -ms-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+}
+
+.item-folio__project-link i {
+    font-size: 1.8rem;
+    line-height: 4.2rem;
+}
+
+.item-folio__project-link::before {
+    display: block;
+    content: "";
+    height: 1px;
+    width: 3rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    position: absolute;
+    top: 50%;
+    left: -3rem;
+}
+
+.item-folio__project-link:hover, .item-folio__project-link:focus, .item-folio__project-link:active {
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+
+/* on hover */
+
+.item-folio:hover .item-folio__thumb a::before {
+    opacity: 1;
+    visibility: visible;
+}
+
+.item-folio:hover .item-folio__thumb a::after {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+}
+
+.item-folio:hover .item-folio__thumb img {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+.item-folio:hover .item-folio__project-link {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+
+/* ------------------------------------------------------------------- 
+ * responsive:
+ * works
+ * ------------------------------------------------------------------- */
+
+@media only screen and (max-width: 1700px) {
+    .masonry-wrap {
+        width: 1400px;
+    }
+    .masonry .grid-sizer, .masonry__brick {
+        width: 350px;
+    }
+}
+
+@media only screen and (max-width: 1500px) {
+    .masonry-wrap {
+        width: 1200px;
+    }
+    .masonry .grid-sizer, .masonry__brick {
+        width: 400px;
+    }
+}
+
+@media only screen and (max-width: 1300px) {
+    .masonry-wrap {
+        width: 999px;
+    }
+    .masonry .grid-sizer, .masonry__brick {
+        width: 333px;
+    }
+}
+
+@media only screen and (max-width: 1099px) {
+    .masonry-wrap {
+        width: 90%;
+        max-width: 800px;
+    }
+    .masonry .grid-sizer, .masonry__brick {
+        width: 50%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .masonry .grid-sizer, .masonry__brick {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .masonry-wrap {
+        width: auto;
+    }
+}
 
 /** 
  * ===================================================================
@@ -1950,18 +2179,34 @@ header .logo a {
  *
  * ------------------------------------------------------------------- 
  */
-#publications {
-	background: #FFFFFF;
+#workinprogress {
+	background: #ebebeb;
 	padding-top: 12rem;
 	padding-bottom: 12rem;
 }
-.publications-content {
+
+.section-intro h1 {
+	font-family: "poppins-semibold", serif;
+	font-size: 3.6rem;
+	color: #000000;
+	line-height: 1.25;
+	margin-bottom: 1.2rem;
+}
+.section-intro h5 {
+	color:  #ba4e16;
+	font-size: 1.6rem;
+	line-height: 1.875;
+	margin-bottom: 0.3rem;
+	letter-spacing: .4rem;
+}
+
+.workinprogress-content {
 	position: relative;
 	text-align: left;
 	max-width: 850px;
 	margin-bottom: 3.6rem;
 }
-.publications-content h3 {
+.workinprogress-content h3 {
 	font-family: "poppins-bold", sans-serif;
 	font-size: 1.8rem;
 	text-transform: uppercase;
@@ -1988,6 +2233,102 @@ header .logo a {
 	#publications .folio-title {
 		font-size: 2.2rem;
 	}
+}
+
+
+#about {
+	background: #ffffff;
+	padding-top: 12rem;
+	padding-bottom: 5rem;
+}
+#about .section-intro {
+	margin-bottom: 3rem;
+}
+
+.intro-info {
+	margin-top: 4.2rem;
+	margin-right: -30px;
+	margin-left: -95px;
+}
+.intro-info img {
+	height: 15rem;
+	width: 15rem;
+	border-radius: 70%;
+	margin: 1.3rem 0 0 0;
+	float: left;
+}
+.intro-info .lead {
+	text-align: left;
+	padding-left: 20rem;
+}
+
+.about-content {
+	position: relative;
+	text-align: left;
+	max-width: 850px;
+	margin-bottom: 3.6rem;
+}
+.about-content h3 {
+	font-family: "poppins-bold", sans-serif;
+	font-size: 1.8rem;
+	text-transform: uppercase;
+	letter-spacing: .25rem;
+}
+
+/** 
+ * ===================================================================
+ * 11. about - (_layout.scss)
+ *
+ * ------------------------------------------------------------------- 
+ */
+
+#filmography {
+	background: #ffffff;
+	padding-top: 12rem;
+	padding-bottom: 5rem;
+
+}
+
+#filmography .section-intro {
+	margin-bottom: 3rem;
+}
+
+
+.filmography-content .info-list {
+	list-style: none;
+	margin-left: 0;
+}
+.filmography-content .info-list li {
+	padding: 0 0 1.5rem 0;
+	margin-bottom: .6rem;
+}
+.filmography-content .info-list li strong {
+	font-family: "poppins-bold", sans-serif;
+	color: #313131;
+	text-transform: uppercase;
+	letter-spacing: .2rem;
+	font-size: 1.5rem;
+	line-height: 3rem;
+}
+.filmography-content .info-list li span {
+	display: block;
+	font-family: "poppins-regular", sans-serif;
+	color: #888888;
+	font-size: 1.5rem;
+	line-height: 1;
+}
+.filmography-content .skill-bars {
+	margin-top: 6rem;
+}
+
+.button-section {
+	text-align: center;
+}
+.button-section .button {
+	width: 250px;
+}
+.button-section [class*="col-"] .button:first-child {
+	margin-right: 4rem;
 }
 
 /**
@@ -2194,7 +2535,6 @@ header .logo a {
 	position: relative;
 	text-align: center;
 }
-
 .section-intro {
 	max-width: 700px;
 	margin-left: auto;

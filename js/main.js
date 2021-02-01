@@ -141,15 +141,13 @@
 	/*---------------------------------------------------- */
 	/*	Masonry
 	------------------------------------------------------ */
-	var containerProjects = $('#folio-wrapper');
+	var containerBricks = $('.masonry');
 
-	containerProjects.imagesLoaded( function() {
-
-		containerProjects.masonry( {		  
-		  	itemSelector: '.folio-item',
-		  	resize: true 
+	containerBricks.imagesLoaded(function () {
+		containerBricks.masonry({
+			itemSelector: '.masonry__brick',
+			resize: true
 		});
-
 	});
 
 
@@ -324,6 +322,7 @@
 
 		}		
 
-	});		
+	});
+
 
 })(jQuery);
