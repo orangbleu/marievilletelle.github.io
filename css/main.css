@@ -1123,29 +1123,41 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 /* ------------------------------------------------------------------- 
  * ## mobile menu toggle - (_site-layout.css) 
  * ------------------------------------------------------------------- */
-
-.header-menu-toggle {
+.mobile-menu-button {
     display: none;
     position: absolute;
-    right: 29px;
+    right: 35px;
     top: 18px;
-    height: 42px;
-    width: 42px;
     line-height: 42px;
     font-family: "montserrat-regular", sans-serif;
-    font-size: 1.4rem;
+    font-size: 3rem;
     text-transform: uppercase;
     letter-spacing: .2rem;
-    color: rgba(255, 255, 255, 0.5);
+    color: white;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
 }
 
-.header-menu-toggle:hover, .header-menu-toggle:focus {
+.mobile-close-button {
+    display: none;
+    position: absolute;
+    right: 35px;
+    top: 18px;
+    line-height: 42px;
+    font-family: "montserrat-regular", sans-serif;
+    font-size: 3rem;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    color: white;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.mobile-menu-button:hover, .mobile-menu-button:focus {
     color: #FFFFFF;
 }
 
-.header-menu-toggle span {
+.mobile-menu-button span {
     display: block;
     width: 24px;
     height: 2px;
@@ -1163,8 +1175,8 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     color: transparent;
 }
 
-.header-menu-toggle span::before, 
-.header-menu-toggle span::after {
+.mobile-menu-button span::before, 
+.mobile-menu-button span::after {
     content: '';
     width: 100%;
     height: 100%;
@@ -1175,37 +1187,37 @@ button::-moz-focus-inner, input::-moz-focus-inner {
     transition: all 0.5s ease-in-out;
 }
 
-.header-menu-toggle span::before {
+.mobile-menu-button span::before {
     top: -9px;
 }
 
-.header-menu-toggle span::after {
+.mobile-menu-button span::after {
     bottom: -9px;
 }
 
-.s-header.sticky .header-menu-toggle {
+.s-header.sticky .mobile-menu-button {
     top: 12px;
 }
 
-.header-menu-toggle.is-clicked span {
+.mobile-menu-button.is-clicked span {
     background-color: rgba(255, 255, 255, 0);
     -webkit-transition: all 0.1s ease-in-out;
     transition: all 0.1s ease-in-out;
 }
 
-.header-menu-toggle.is-clicked span::before, 
-.header-menu-toggle.is-clicked span::after {
+.mobile-menu-button.is-clicked span::before, 
+.mobile-menu-button.is-clicked span::after {
     background-color: white;
 }
 
-.header-menu-toggle.is-clicked span::before {
+.mobile-menu-button.is-clicked span::before {
     top: 0;
     -webkit-transform: rotate(135deg);
     -ms-transform: rotate(135deg);
     transform: rotate(135deg);
 }
 
-.header-menu-toggle.is-clicked span::after {
+.mobile-menu-button.is-clicked span::after {
     bottom: 0;
     -webkit-transform: rotate(225deg);
     -ms-transform: rotate(225deg);
@@ -1285,7 +1297,6 @@ header .logo a {
     color: #af2b2b;
 }
 
-
 /* ------------------------------------------------------------------- 
  * responsive:
  * header
@@ -1323,7 +1334,13 @@ header .logo a {
     }
     .header-menu-toggle {
         display: block;
-    }
+	}
+	.mobile-menu-button {
+		display: block;
+	}
+	.mobile-close-button {
+		display: block;
+	}
 }
 
 
@@ -1466,12 +1483,11 @@ header .logo a {
 .intro-social {
 	display: table;
 	position: absolute;
-	width: 100%;
+	width: 94%;
 	left: 0;
 	bottom: 0.6rem;
 	font-size: 4.5rem;
-	padding: 70px;
-	margin-bottom: auto;
+	margin-bottom: 5rem;
 }
 .intro-social li {
 	display: inline-block;
@@ -1518,7 +1534,7 @@ header .logo a {
 	}
 	.intro-social {
 		font-size: 2.3rem;
-		padding: 45px;
+		padding: 20px;
 	}
 	.intro-social li {
 		margin: 0 10px;
