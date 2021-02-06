@@ -524,7 +524,6 @@ select {
 	padding: 1.5rem 0;
 	border: 0;
 	outline: none;
-	vertical-align: middle;
 	color: #313131;
 	font-family: "poppins-regular", sans-serif;
 	font-size: 1.5rem;
@@ -2352,19 +2351,24 @@ header .logo a {
  * ------------------------------------------------------------------
  */
 .popup-modal {
-	max-width: 550px;
+	max-height: 70%;
+	width: 80%;
 	background: #FFFFFF;
 	position: relative;
 	margin: 0 auto;
 }
 .popup-modal .media {
+	float: left;
 	position: relative;
+	width: 70%;
 }
 .popup-modal img {
 	vertical-align: bottom;
 }
 .popup-modal .description-box {
+	float: right;
 	padding: 1.8rem 3.6rem 3rem;
+	width: 30%;
 }
 .popup-modal .description-box h4 {
 	font-family: "poppins-bold", sans-serif;
