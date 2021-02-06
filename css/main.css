@@ -1754,8 +1754,8 @@ header .logo a {
  * ------------------------------------------------------------------- 
  */
 #resume {
-	padding-top: 12rem;
-	padding-bottom: 12rem;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
 }
 
 #resume .resume-header {
@@ -1919,7 +1919,7 @@ header .logo a {
  * ## bricks/masonry - (_site-layout.scss)
  * ------------------------------------------------------------------- */
 #archivedprojects {
-	padding-top: 15rem;
+	padding-top: 3rem;
 	padding-bottom: 15rem;
 	position: relative;
 }
@@ -2196,7 +2196,7 @@ header .logo a {
  */
 #workinprogress {
 	background: #ebebeb;
-	padding-top: 12rem;
+	padding-top: 3rem;
 	padding-bottom: 12rem;
 }
 
@@ -2299,7 +2299,7 @@ header .logo a {
 
 #filmography {
 	background: #ffffff;
-	padding-top: 12rem;
+	padding-top: 3rem;
 	padding-bottom: 5rem;
 
 }
@@ -2367,6 +2367,10 @@ header .logo a {
 	position: relative;
 	width: 70%;
 	height: 500px;
+}
+.popup-modal img {
+	max-width: 100%;
+	max-height: 100%;
 }
 .popup-modal iframe {
 	vertical-align: bottom;
@@ -2489,60 +2493,6 @@ header .logo a {
 	transform: translateY(-100%);
 }
 
-/** 
- * ===================================================================
- * 14. call-to-action section - (_layout.scss)
- *
- * ------------------------------------------------------------------- 
- */
-#cta {
-	padding-top: 10.2rem;
-	padding-bottom: 9rem;
-	text-align: center;
-}
-#cta p.lead {
-	color: #6e6e6e;
-}
-.cta-content {
-	max-width: 640px;
-}
-.cta-thumb {
-	display: inline-block;
-	margin-bottom: 1.2rem;
-}
-.cta-thumb img {
-	height: 7.8rem;
-	width: 7.8rem;
-	border-radius: 50%;
-}
-
-/**
- * section ads - (_layout.scss)
- * ------------------------------------------------------------------- 
- */
-.section-ads h2 {
-	position: relative;
-	padding-bottom: 2.1rem;
-}
-.section-ads h2::after {
-	content: "";
-	display: block;
-	height: 3px;
-	width: 80px;
-	background: rgba(0, 0, 0, 0.2);
-	position: absolute;
-	left: 50%;
-	bottom: 0;
-	margin-left: -40px;
-}
-.section-ads h2 a, .section-ads h2 a:visited {
-	color: #313131;
-}
-.section-ads span {
-	color: #3F0D39;
-}
-
-
 
 
 /** 
@@ -2575,10 +2525,10 @@ header .logo a {
 	margin-left: -95px;
 }
 .intro-info img {
-	height: 15rem;
-	width: 15rem;
+	height: 25rem;
+	width: 25rem;
 	border-radius: 70%;
-	margin: 1.3rem 0 0 0;
+	margin: 2.1rem 0 0 -7rem;
 	float: left;
 }
 .intro-info .lead {
@@ -2781,8 +2731,8 @@ header .logo a {
  */
 #contact {
 	background: #151515;
-	padding-top: 12rem;
-	padding-bottom: 7.2rem;
+	padding-top: 3rem;
+	padding-bottom: 3rem;
 }
 #contact .section-intro h1 {
 	color: white;
