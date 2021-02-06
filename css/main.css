@@ -2360,13 +2360,15 @@ header .logo a {
 	background: #FFFFFF;
 	position: relative;
 	margin: 0 auto;
+	height: 70%;
 }
 .popup-modal .media {
 	float: left;
 	position: relative;
 	width: 70%;
+	height: 500px;
 }
-.popup-modal img {
+.popup-modal iframe {
 	vertical-align: bottom;
 }
 .popup-modal .description-box {
@@ -2611,6 +2613,7 @@ header .logo a {
 .owl-pagination {
 	text-align: center;
 	margin: .6rem 0 0;
+	max-height: 500px;
 }
 
 .owl-theme .owl-controls .owl-page {

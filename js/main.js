@@ -50,7 +50,7 @@
   	if (w.matches) {
   		vid.pause();
     	source.removeAttribute("src");
-    	source.setAttribute("src", "intro_portrait.mp4");
+    	source.setAttribute("src", "intro_portrait.ogv");
     	vid.load();
     	vid.play();
   } else {
@@ -233,10 +233,10 @@
 	/*----------------------------------------------------*/
 	/*	Modal Popup
 	------------------------------------------------------*/
-   $('.item-wrap a').magnificPopup({
+   $('.item-folio a').magnificPopup({
 
       type:'inline',
-      fixedContentPos: false,
+      fixedContentPos: true,
       removalDelay: 300,
       showCloseBtn: false,
       mainClass: 'mfp-fade'
