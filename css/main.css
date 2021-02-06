@@ -2307,7 +2307,11 @@ header .logo a {
 #filmography .section-intro {
 	margin-bottom: 3rem;
 }
-
+#filmography .row h3 {
+	text-align: right;
+	font-size: 1.8rem;
+	font-family: "poppins-medium", sans-serif;
+}
 
 .filmography-content .info-list {
 	list-style: none;
