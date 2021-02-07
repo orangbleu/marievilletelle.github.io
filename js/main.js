@@ -50,15 +50,25 @@
   	if (w.matches) {
   		vid.pause();
     	source.removeAttribute("src");
-    	source.setAttribute("src", "intro_portrait_short.mp4");
+		source.setAttribute("src", "intro_portrait_short.mp4");
+		var source2 = document.createElement("source");
+		source2.id = "altsrc";
+		source2.setAttribute("src", "intro_portrait.ogv");
+		source2.setAttribute("type", "video/ogg");
+		vid.appendChild(source2);
     	vid.load();
     	vid.play();
   } else {
-    vid.pause();
-    source.removeAttribute("src");
-    source.setAttribute("src", "intro_landscape.mp4");
-    vid.load();
-    vid.play();
+		vid.pause();
+		source.removeAttribute("src");
+		source.setAttribute("src", "intro_landscape.mp4");
+		var source2 = document.createElement("source");
+		source2.id = "altsrc";
+		source2.setAttribute("src", "intro_landscape.ogv");
+		source2.setAttribute("type", "video/ogg");
+		vid.appendChild(source2);
+		vid.load();
+		vid.play();
   }
 	
 	/*---------------------------------------------------- */
