@@ -2373,7 +2373,7 @@ header .logo a {
 	max-height: 100%;
 }
 .popup-modal iframe {
-	vertical-align: bottom;
+	display: block;
 }
 .popup-modal .description-box {
 	float: right;
@@ -2436,6 +2436,20 @@ header .logo a {
 	.popup-modal {
 		width: auto;
 		margin: 0 20px;
+	}
+	.popup-modal .media {
+		float: none;
+		width: 100%;
+		min-height: 150px;
+		height: auto;
+	}
+	.popup-modal img {
+		width: 100%;
+	}
+	.popup-modal .description-box {
+		float: none;
+		width: 100%;
+		margin-top: 0;
 	}
 }
 
@@ -2642,10 +2656,11 @@ header .logo a {
 		margin-top: 3rem;
 	}
 	.intro-info img {
-		height: 12rem;
-		width: 12rem;
+		height: 20rem;
+		width: 20rem;
 		float: none;
 		display: inline-block;
+		margin: auto;
 	}
 	.intro-info .lead {
 		padding-left: 0;
