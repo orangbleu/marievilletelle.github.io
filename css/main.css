@@ -2227,8 +2227,57 @@ header .logo a {
 	text-transform: uppercase;
 	letter-spacing: .25rem;
 }
+#workinprogress-content .owl-carousel{
+    
+    width:900px;
+    height 150px;
+    position:absolute;
+    background-color:#aac155;
+    top:0;
+    left:0;
+}
 
+#workinprogress-content .owl-carousel > div{
+    
+    width:20%;
+    height :150px;
+    display:inline-block;
+    background-color:#5d730c;
+}
 
+#workinprogress-content .owl-carousel div img{
+    width:100%;
+}
+
+#workinprogress-content .owl-carousel div h2, .owl-carousel div .textoverlay{
+	background: linear-gradient(to bottom, rgba(0,0,0,0), rgba(0,0,0,0.4), rgba(0,0,0,0.7), rgba(0,0,0,1));
+	position:absolute;
+    color:#FFF;
+	display:table-row;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}
+
+#workinprogress-content .owl-carousel div h2, .owl-carousel div .textoverlay h1 {
+	font-size: 6rem;
+	position: absolute;
+	color: #FFFFFF;
+	font-family: "poppins-medium", sans-serif;
+	bottom: 10%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+#workinprogress-content .owl-carousel div h2, .owl-carousel div .textoverlay p {
+	font-size: 2rem;
+	position: absolute;
+	color: #FFFFFF;
+	font-family: "poppins-medium", sans-serif;
+	bottom: 0px;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
 /**
  * responsive:
  * portfolio
@@ -2245,8 +2294,12 @@ header .logo a {
 	}
 }
 @media only screen and (max-width:400px) {
-	#publications .folio-title {
-		font-size: 2.2rem;
+	#workinprogress-content .owl-carousel div h2, .owl-carousel div .textoverlay p {
+		font-size: 1rem;
+		line-height: 1.3rem;
+	}
+	#workinprogress-content .owl-carousel div h2, .owl-carousel div .textoverlay h1 {
+		font-size: 4rem;
 	}
 }
 
