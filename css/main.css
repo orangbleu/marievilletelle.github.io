@@ -2452,6 +2452,24 @@ header .logo a {
 		margin-top: 0;
 	}
 }
+@media only screen and (max-width:768px) {
+	.popup-modal .media {
+		float: none;
+		width: 100%;
+		height: auto;
+	}
+	.popup-modal .img {
+		width: 100%;
+	}
+	.popup-modal iframe {
+		min-height: 500px;
+	}
+	.popup-modal .description-box {
+		float: none;
+		width: 100%;
+		margin-top: 0;
+	}
+}
 
 /**
  * transition effect for modal popup - (_layout.scss)
@@ -2630,8 +2648,9 @@ header .logo a {
 }
 @media only screen and (max-width:768px) {
 	.intro-info img {
-		height: 12rem;
-		width: 12rem;
+		height: 15rem;
+		width: 15rem;
+		margin: 3.5rem 0 0 -7rem;
 	}
 	.intro-info .lead {
 		padding-left: 11rem;
