@@ -50,7 +50,7 @@
   	if (w.matches) {
   		vid.pause();
     	source.removeAttribute("src");
-    	source.setAttribute("src", "intro_portrait.mp4");
+    	source.setAttribute("src", "intro_portrait_short.mp4");
     	vid.load();
     	vid.play();
   } else {
