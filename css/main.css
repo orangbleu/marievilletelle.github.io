@@ -2264,6 +2264,7 @@ header .logo a {
 	position: absolute;
 	color: #FFFFFF;
 	font-family: "poppins-medium", sans-serif;
+	padding-bottom: 4rem;
 	bottom: 10%;
 	left: 50%;
 	transform: translate(-50%, -50%);
