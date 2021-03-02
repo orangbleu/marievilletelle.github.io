@@ -61,7 +61,7 @@
   } else {
 		vid.pause();
 		source.removeAttribute("src");
-		source.setAttribute("src", "intro_landscape.mp4");
+		source.setAttribute("src", "intro_landscape_short.mp4");
 		var source2 = document.createElement("source");
 		source2.id = "altsrc";
 		source2.setAttribute("src", "intro_landscape.ogv");
