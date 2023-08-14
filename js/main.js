@@ -51,22 +51,12 @@
   		vid.pause();
     	source.removeAttribute("src");
 		source.setAttribute("src", "intro_portrait_short.mp4");
-		var source2 = document.createElement("source");
-		source2.id = "altsrc";
-		source2.setAttribute("src", "intro_portrait.ogv");
-		source2.setAttribute("type", "video/ogg");
-		vid.appendChild(source2);
     	vid.load();
     	vid.play();
   } else {
 		vid.pause();
 		source.removeAttribute("src");
 		source.setAttribute("src", "intro_landscape_short.mp4");
-		var source2 = document.createElement("source");
-		source2.id = "altsrc";
-		source2.setAttribute("src", "intro_landscape.ogv");
-		source2.setAttribute("type", "video/ogg");
-		vid.appendChild(source2);
 		vid.load();
 		vid.play();
   }
@@ -116,40 +106,40 @@
 	});	
 
 
-	/*----------------------------------------------------- */
-	/* Stat Counter
-  	------------------------------------------------------- */
-   var statSection = $("#stats"),
-       stats = $(".stat-count");
+// 	/*----------------------------------------------------- */
+// 	/* Stat Counter
+//   	------------------------------------------------------- */
+//    var statSection = $("#stats"),
+//        stats = $(".stat-count");
 
-   statSection.waypoint({
+//    statSection.waypoint({
 
-   	handler: function(direction) {
+//    	handler: function(direction) {
 
-      	if (direction === "down") {       		
+//       	if (direction === "down") {       		
 
-			   stats.each(function () {
-				   var $this = $(this);
+// 			   stats.each(function () {
+// 				   var $this = $(this);
 
-				   $({ Counter: 0 }).animate({ Counter: $this.text() }, {
-				   	duration: 4000,
-				   	easing: 'swing',
-				   	step: function (curValue) {
-				      	$this.text(Math.ceil(curValue));
-				    	}
-				  	});
-				});
+// 				   $({ Counter: 0 }).animate({ Counter: $this.text() }, {
+// 				   	duration: 4000,
+// 				   	easing: 'swing',
+// 				   	step: function (curValue) {
+// 				      	$this.text(Math.ceil(curValue));
+// 				    	}
+// 				  	});
+// 				});
 
-       	} 
+//        	} 
 
-       	// trigger once only
-       	this.destroy();      	
+//        	// trigger once only
+//        	this.destroy();      	
 
-		},
+// 		},
 			
-		offset: "90%"
+// 		offset: "90%"
 	
-	});	
+// 	});	
 
 
 	/*---------------------------------------------------- */
