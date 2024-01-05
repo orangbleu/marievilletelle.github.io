@@ -104,3 +104,11 @@
     font-style: normal;
 }
 
+/*
+ *  PlayfairDisplay 
+================================================================================ */
+@font-face {
+    font-family: 'PlayfairDisplay';
+    src: url(/fonts/playfair-display);
+
+}
