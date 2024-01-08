@@ -1209,7 +1209,7 @@ header .logo a {
 
 .header-nav-wrap {
     font-family: "poppins-medium", sans-serif;
-    font-size: 2rem;
+    font-size: 2,8rem;
     text-transform: uppercase;
     letter-spacing: .25rem;
     position: absolute;
@@ -1232,8 +1232,9 @@ header .logo a {
 
 .header-nav li a {
     display: block;
-    line-height: 72px;
+    line-height: 80px;
     color: #ba4e16;
+	font-size: 2.4rem;
 }
 
 .header-nav li.current a {
